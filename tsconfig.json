@@ -25,7 +25,7 @@
     // "moduleDetection": "auto",                        /* Control what method is used to detect module-format JS files. */
 
     /* Modules */
-    "module": "commonjs",                                /* Specify what module code is generated. */
+    "module": "ES2020",                                /* Specify what module code is generated. */
     "rootDir": "./src/typescript",                                  /* Specify the root folder within your source files. */
     // "moduleResolution": "node10",                     /* Specify how TypeScript looks up a file from a given module specifier. */
     // "baseUrl": "./",                                  /* Specify the base directory to resolve non-relative module names. */
@@ -106,10 +106,12 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
     "noUncheckedIndexedAccess": true,
+    "types": ["node", "vitest/globals"],
   },
-  "exclude": [
-    "src/**/*.spec.ts",
-    "src/**/*.test.ts"
-  ],
-  "include": ["src/typescript"]
+  
+  // "exclude": [
+  //   "src/**/*.spec.ts",
+  //   "src/**/*.test.ts"
+  // ],
+  "include": ["src/typescript/**/*.ts"]
 }
