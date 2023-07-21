@@ -31,4 +31,4 @@ Array.prototype.polySome = some
 
 const arr = [1, 2, 3]
 
-// console.log(arr.polyEvery((item, index, arr) => item < 10))
+// console.log(arr.some((item, index, arr) => item < 10))
