@@ -1,6 +1,11 @@
 // @ts-nocheck
 
 
+// Array.some method returns boolean value for given test.
+// It runs the test for every element untill the given test is passed
+// It returns boolean.
+// It does not mutate the original array.
+
 function some(cb: (item, index, array: any[]) => boolean | undefined, thisArg) {
     if (this.length == 0) return true
 
