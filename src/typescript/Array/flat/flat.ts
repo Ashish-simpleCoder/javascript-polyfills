@@ -4,17 +4,17 @@
 // -into it recursively up to the specified depth
 
 function flat(depth = 1) {
+    if (depth == 0) return this
+
     const flattenedArr = []
-    let currentDepth = 0
 
-    recursiveFlatting(this)
+    recursiveFlatting(this, 0)
 
 
-    function recursiveFlatting(arr) {
+    function recursiveFlatting(arr, depthCursor) {
         for (let i = 0; i < arr.length; i++) {
-            if (Array.isArray(arr[i]) && currentDepth < depth) {
-                currentDepth++
-                recursiveFlatting(arr[i])
+            if (Array.isArray(arr[i]) && depthCursor < depth) {
+                recursiveFlatting(arr[i], depthCursor + 1)
             } else {
                 flattenedArr.push(arr[i])
             }
